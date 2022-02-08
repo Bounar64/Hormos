@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Accueil {% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <h1 class="text-center title my-5">Nos produits</h1>
+    <div class="row">
+        <div class="col grid-container">
+            {% for title in titles %}
+                <div class="card grid-item">
+                    <img src="https://picsum.photos/400/400" class="img-fluid" alt="image produit">
+                    <h4 class="sub-title mt-3">{{ title }}</h4>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
