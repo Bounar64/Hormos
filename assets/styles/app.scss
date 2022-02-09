@@ -30,6 +30,44 @@ body {
     color: #444444;
 }
 
+.block-intro {
+    font-family: 'Courier New', Courier, monospace;
+    color: #444444;
+
+        .collection {
+            text-decoration: none;
+            border-bottom: 1px solid #444444;
+        }
+
+        .collection:hover {
+            border-bottom: none;
+        }
+}
+
+.block-video {
+    position: relative;
+
+        .miniature {
+            position: absolute;
+            z-index: 20;
+        }
+
+        i {
+            position: absolute;
+            right: 50%;
+            top: 40%;
+            font-size: 40px;
+            color: #fff;
+        }
+
+        .popover {
+            position: absolute;
+            width: 90px;
+            text-align: center;
+            left: 45%;
+            top:46%;
+        }
+}
 .grid-container {  
     display: grid;
     grid-template-columns: auto auto auto auto;
