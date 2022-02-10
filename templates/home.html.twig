@@ -5,38 +5,252 @@
 {% block body %}
 
 <div class="container">
-
     <div class="col-12 m-auto">
         <h2 class="text-center title mt-5">Un souffle solaire</h2>
         <p class="col-12 col-xl-8 m-auto text-center block-intro p-3">Comme un élan d’optimisme, la collection printemps-été 2022 appelle la légèreté et la douceur de vivre.</p>
         <div class="col-9 m-auto text-center block-intro collection pt-2 pb-5"><a href="#" class="collection">Découvrez la collection</a></div>
     </div>
 
-    <div class="block-video">
-        <div class="col-12 mb-5 miniature" id="miniature">
-            <a href="#" id="play" onclick="fctPlay('video');" onmouseover="Affiche();"><i class="fa-solid fa-play"></i></a> 
-            <p class="popover" id="popover">Lire la vidéo</p>
-            <img class="col-12 mb-5" src="{{ asset("/build/images/miniature-video-intro.png") }}" alt="miniature">
+    <section>
+        <div class="block-video">
+            <div class="col-12 mb-5 miniature" id="miniature">
+                <a href="#" id="play" onclick="fctPlay('video');" onmouseover="Affiche();"><i class="fa-solid fa-play"></i></a> 
+                <p class="popover" id="popover">Lire la vidéo</p>
+                <img class="col-12 mb-5" src="{{ asset("/build/images/miniature-video-intro.png") }}" alt="miniature">
+            </div>
+
+            <video id="video" class="col-12 mb-5" controls="controls" controlslist="nodownload" poster="/build/images/miniature-video-intro.png">
+                <source src="{{ asset("/build/video/video-intro.mp4") }}" type="video/mp4">
+                <source src="{{ asset("/build/video/video-intro.ogg") }}" type="video/ogg">
+                Mettez à jour votre navigateur pour visualiser la vidéo
+            </video>
         </div>
+    </section>
 
-        <video id="video" class="col-12 mb-5" controls="controls" controlslist="nodownload" poster="/build/images/miniature-video-intro.png">
-            <source src="{{ asset("/build/video/video-intro.mp4") }}" type="video/mp4">
-            <source src="{{ asset("/build/video/video-intro.ogg") }}" type="video/ogg">
-            Mettez à jour votre navigateur pour visualiser la vidéo
-        </video>
-    </div>
+    <section>
+        <h2 class="text-center title mt-5">Nos produits</h2>
+        <div class="row">
+            <div class="col grid-container">
+                {% set titles = ["Prêt-à-porter Femme", "Prêt-à-porter Homme", "Bijouterie Joaillerie", "Maquillage", "Accessoires Bijoux", "Ceinture", "Maroquinerie", "Chaussures"] %}
+                {% for title in titles %}
+                    <div class="card grid-item">
+                        <img src="https://picsum.photos/400/400" class="img-fluid" alt="image produit">
+                        <h4 class="sub-title mt-3">{{ title }}</h4>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="col-12 m-auto square">
+            <h2 class="text-center title mt-5 pt-5">Trois nouveaux objets de beauté</h2>
+            <p class="col-12 col-xl-8 m-auto text-center block-intro p-3">Rose Nymphéa, Orange Capucine Et Beige d’Eau composent ce nouveau bouquet saisonnier.</p>
+            <div class="col-9 m-auto text-center block-intro collection pt-2 pb-5"><a href="#" class="collection">Découvrez la collection</a></div>
+            
+            <div class="col-12 d-flex justify-content-center">
+                <img class="col-9 mb-5" src="{{ asset("/build/images/le-rouge.jpg") }}" alt="rouge à lèvre">
+            </div>
+        </div>
+    </section>
 
-    <h2 class="text-center title mt-5">Nos produits</h2>
-    <div class="row">
-        <div class="col grid-container">
-            {% for title in titles %}
-                <div class="card grid-item">
-                    <img src="https://picsum.photos/400/400" class="img-fluid" alt="image produit">
-                    <h4 class="sub-title mt-3">{{ title }}</h4>
+    <section>
+        <div class="col-12 m-auto">
+            <h2 class="text-center title mt-5 pt-5">Des rouges sur tous les tons</h2>
+            <p class="col-12 col-xl-8 m-auto text-center block-intro p-3">Rouge Hormòs, collection édition limitée Printemps-Été 2022, Trois nouvelles teintes au fini brillant.</p>
+            <div class="col-9 m-auto text-center block-intro collection pt-2 pb-5"><a href="#" class="collection">Découvrez la collection</a></div>
+            
+            <div class="col-12 grid d-flex justify-content-between">
+                <div class="col-12 col-xl-5">
+                    <img class="img-fluid text-center" src="{{ asset("build/images/Hormòs-France.png") }}" alt="dame lipstick" width="600">
                 </div>
-            {% endfor %}
+                <div class="col-12 col-xl-5 d-block" id="d-block">
+                    <div class="col d-flex justify-content-between"> 
+                        <div class="col-5 card p-0">
+                            <a href="#" class="text-decoration-none">
+                                <img class="img-fluid lipstick" src="{{ asset("build/images/2022-02-09 20_03_14-60361TV005_set (230×230).png") }}" alt="lipstick">
+                                {% set text = "Rouge Hormòs, Rouge à lèvres brillant, Edition limitée, Beige d'Eau" %}
+                                <h4 class="sub-title mt-3 textCut" id="textCut">{{ text|length > 40 ? text|slice(0, 41)|split(' ')|slice(0, -1)|join(' ') ~ ' ...' : text }}</h4>
+                                <h4 class="sub-title mt-3 fullText" id="fullText">{{ text }}</span></h4>
+                                <p class="price">69 €</p>
+                            </a>
+                        </div>
+                        
+                        <div class="col-5 card p-0">
+                            <a href="#" class="text-decoration-none">
+                                <img class="img-fluid lipstick" src="{{ asset("build/images/2022-02-09 20_04_39-60361TV038_set (230×230).png") }}" alt="lipstick">
+                                {% set text = "Rouge Hormòs, Rouge à lèvres brillant, Edition limitée, Rose Nymphéa" %}
+                                <h4 class="sub-title mt-3 textCut">{{ text|length > 40 ? text|slice(0, 41)|split(' ')|slice(0, -1)|join(' ') ~ ' ...' : text }}</h4>
+                                <p class="price">69 €</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-between mt-3">
+                        <div class="col-5 card p-0">
+                            <a href="#" class="text-decoration-none">
+                                <img class="img-fluid lipstick" src="{{ asset("build/images/2022-02-09 20_05_23-60361TV035_set (230×230).png") }}" alt="lipstick">
+                                {% set text = "Rouge Hormòs, Rouge à lèvres brillant, Edition limitée, Orange Capucine" %}
+                                <h4 class="sub-title mt-3 textCut">{{ text|length > 40 ? text|slice(0, 41)|split(' ')|slice(0, -1)|join(' ') ~ ' ...' : text }}</h4>
+                                <p class="price">69 €</p>
+                            </a>
+                        </div>
+                        <div class="col-5 card p-0">
+                            <a href="#" class="text-decoration-none">
+                                <img class="img-fluid lipstick" src="{{ asset("build/images/2022-02-09 20_06_03-60001BV000_set (230×230).png") }}" alt="lipstick">
+                                {% set text = "Rouge Hormòs, Baume à lèvres" %}
+                                <h4 class="sub-title mt-3 textCut">{{ text|length > 40 ? text|slice(0, 41)|split(' ')|slice(0, -1)|join(' ') ~ ' ...' : text }}</h4>
+                                <p class="price">64 €</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <section>
+        <div class="col-12 m-auto square">
+            <h2 class="text-center title mt-5 pt-5">Esprit estival</h2>
+            <p class="col-12 col-xl-8 m-auto text-center block-intro p-3">Associant savoir-faire emblématiques et inspirations de la Maison, les accessoires de mode de l'été déploient leur audace colorée dans une multitude de détails.</p>
+            <div class="col-9 m-auto text-center block-intro collection pt-2 pb-5"><a href="#" class="collection">Accessoirisez la saison</a></div>
+            
+            <div class="col-12 d-flex justify-content-center">
+                <img class="col-9 mb-5" src="{{ asset("/build/images/festival.png") }}" alt="women grass">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="col-12 m-auto">
+            <h2 class="text-center title mt-5 pt-5">Ponctuations légères</h2>
+            <p class="col-12 col-xl-8 m-auto text-center block-intro p-3">Couleurs pop, pierres raffinées, détails ajourés, les ceintures, bijoux et chapeaux féminins invitent à égayer la silhouette avec légèreté.</p>
+            <div class="col-9 m-auto text-center block-intro collection pt-2 pb-5"><a href="#" class="collection">Illuminez l'allure</a></div>
+            
+            <div class="col-12 grid d-flex justify-content-between">
+                <div class="col-12 col-xl-5">
+                    <img class="img-fluid text-center" src="https://picsum.photos/400/400" alt="dame grass" width="600">
+                </div>
+                <div class="col-12 col-xl-5 d-block" id="d-block">
+                    <div class="col d-flex justify-content-between"> 
+                        <div class="col-5 card p-0">
+                            <a href="#" class="text-decoration-none">
+                                <img class="img-fluid lipstick" src="https://picsum.photos/400/400" alt="bracelet">
+                                {% set text = "Bracelet Clic H" %}
+                                <h4 class="sub-title mt-3 textCut">{{ text|length > 40 ? text|slice(0, 41)|split(' ')|slice(0, -1)|join(' ') ~ ' ...' : text }}</h4>
+                                <p class="price">575 €</p>
+                            </a>
+                        </div>
+                        
+                        <div class="col-5 card p-0">
+                            <a href="#" class="text-decoration-none">
+                                <img class="img-fluid lipstick" src="https://picsum.photos/400/400" alt="lipstick">
+                                {% set text = "Pendentif Fusion Amulette Kelly, grand modèle" %}
+                                <h4 class="sub-title mt-3 textCut">{{ text|length > 40 ? text|slice(0, 41)|split(' ')|slice(0, -1)|join(' ') ~ ' ...' : text }}</h4>
+                                <p class="price">605 €</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-between mt-3">
+                        <div class="col-5 card p-0">
+                            <a href="#" class="text-decoration-none">
+                                <img class="img-fluid lipstick" src="https://picsum.photos/400/400" alt="lipstick">
+                                {% set text = "Bracelet Glénan Double Tour" %}
+                                <h4 class="sub-title mt-3 textCut">{{ text|length > 40 ? text|slice(0, 41)|split(' ')|slice(0, -1)|join(' ') ~ ' ...' : text }}</h4>
+                                <p class="price">270 €</p>
+                            </a>
+                        </div>
+                        <div class="col-5 card p-0">
+                            <a href="#" class="text-decoration-none">
+                                <img class="img-fluid lipstick" src="https://picsum.photos/400/400" alt="lipstick">
+                                {% set text = "Boucles d'oreilles Médor Picnic, grand modèle" %}
+                                <h4 class="sub-title mt-3 textCut">{{ text|length > 40 ? text|slice(0, 41)|split(' ')|slice(0, -1)|join(' ') ~ ' ...' : text }}</h4>
+                                <p class="price">950 €</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="col-12 m-auto square">
+            <h2 class="text-center title mt-5 pt-5">Cravate, tous les cous sont permis !</h2>
+            <p class="col-12 col-xl-8 m-auto text-center block-intro p-3">Imprévisible, facétieuse, la cravate Hermès n'entend pas se limiter aux quatre murs d'un bureau. Autour du cou, quelques grammes de soi(e) aux clins d’œil espiègles. Parfait alibi pour déjouer les apparences, trompe-l’œil de tous les jours, la cravate révèle le pas-de-côté, l’inattendu, le hors-cadre. Plaisir esthète, elle habille la silhouette d’un trait, transformable à l’infini.</p>
+            <div class="col-9 m-auto text-center block-intro collection pt-2 pb-5"><a href="#" class="collection">Marquez votre allure</a></div>
+            
+            <div class="col-12 d-flex justify-content-center">
+                <img class="col-9 mb-5" src="https://picsum.photos/900/500" alt="picsum">
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="col-12 m-auto">
+            <h2 class="text-center title mt-5 pt-5">Le règne du rectangle</h2>
+            <p class="col-12 col-xl-8 m-auto text-center block-intro p-3">L’été se prête à toutes les fantaisies : la soie choisit le format rectangulaire pour habiller la silhouette et apporter une touche de douceur lors des moments de fraîcheur. Les motifs et couleurs subliment avec générosité la matière, pour une allure vibrante et élégante.</p>
+            <div class="col-9 m-auto text-center block-intro collection pt-2 pb-5"><a href="#" class="collection">Allongez votre carré</a></div>
+            
+            <div class="col-12 grid d-flex justify-content-between">
+                <div class="col-12 col-xl-5">
+                    <img class="img-fluid text-center" src="https://picsum.photos/400/400" alt="dame grass" width="600">
+                </div>
+                <div class="col-12 col-xl-5 d-block" id="d-block">
+                    <div class="col d-flex justify-content-between"> 
+                        <div class="col-5 card p-0">
+                            <a href="#" class="text-decoration-none">
+                                <img class="img-fluid lipstick" src="https://picsum.photos/400/400" alt="bracelet">
+                                {% set text = "Bracelet Clic H" %}
+                                <h4 class="sub-title mt-3 textCut">{{ text|length > 40 ? text|slice(0, 41)|split(' ')|slice(0, -1)|join(' ') ~ ' ...' : text }}</h4>
+                                <p class="price">750 €</p>
+                            </a>
+                        </div>
+                        
+                        <div class="col-5 card p-0">
+                            <a href="#" class="text-decoration-none">
+                                <img class="img-fluid lipstick" src="https://picsum.photos/400/400" alt="lipstick">
+                                {% set text = "Pendentif Fusion Amulette Kelly, grand modèle" %}
+                                <h4 class="sub-title mt-3 textCut">{{ text|length > 40 ? text|slice(0, 41)|split(' ')|slice(0, -1)|join(' ') ~ ' ...' : text }}</h4>
+                                <p class="price">750 €</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-between mt-3">
+                        <div class="col-5 card p-0">
+                            <a href="#" class="text-decoration-none">
+                                <img class="img-fluid lipstick" src="https://picsum.photos/400/400" alt="lipstick">
+                                {% set text = "Bracelet Glénan Double Tour" %}
+                                <h4 class="sub-title mt-3 textCut">{{ text|length > 40 ? text|slice(0, 41)|split(' ')|slice(0, -1)|join(' ') ~ ' ...' : text }}</h4>
+                                <p class="price">750 €</p>
+                            </a>
+                        </div>
+                        <div class="col-5 card p-0">
+                            <a href="#" class="text-decoration-none">
+                                <img class="img-fluid lipstick" src="https://picsum.photos/400/400" alt="lipstick">
+                                {% set text = "Boucles d'oreilles Médor Picnic, grand modèle" %}
+                                <h4 class="sub-title mt-3 textCut">{{ text|length > 40 ? text|slice(0, 41)|split(' ')|slice(0, -1)|join(' ') ~ ' ...' : text }}</h4>
+                                <p class="price">750 €</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="col-12 m-auto square">
+            <h2 class="text-center title mt-5 pt-5">La boîte orange a de la ressource</h2>
+            <p class="col-12 col-xl-8 m-auto text-center block-intro p-3">Ronde, rectangulaire ou carrée, elle emballe cravate, chapeau, bottes, vaisselle, bijou ou sac. Esthétique, robuste et durable, ces qualités en font un objet à part entière.</p>
+            <div class="col-9 m-auto text-center block-intro collection pt-2 pb-5"><a href="#" class="collection">En savoir plus</a></div>
+            
+            <div class="col-12 d-flex justify-content-center">
+                <img class="col-9 mb-5" src="{{ asset("build/images/boite.jpg") }}" alt="boite">
+            </div>
+        </div>
+    </section>
 </div>
+
+{% include "footer.html.twig" %}
 
 {% endblock %}

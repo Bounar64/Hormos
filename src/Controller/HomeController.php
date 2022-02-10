@@ -12,10 +12,6 @@ class HomeController extends AbstractController {
      */
     public function homepage() {
 
-        $titles = ["Prêt-à-porter Femme", "Prêt-à-porter Homme", "Bijouterie Joaillerie", "Maquillage", "Accessoires Bijoux", "Ceinture", "Maroquinerie", "Chaussures"];
-        
-        return $this->render('home.html.twig', [
-            'titles' => $titles
-        ]);
+        return $this->render('home.html.twig');
     }
 }

@@ -33,3 +33,14 @@ play.addEventListener('click', function() {
     document.getElementById('miniature').style.display = 'none';
     document.getElementById('video').play();
 });
+
+//** En dessous de 1024px de largeur les textes sont complet */
+const screenWidth = screen.width;
+
+if(screenWidth <= 1023) {
+    document.getElementById('textCut').style.display = 'none';
+    document.getElementById('textCut').nextElementSibling.style.display = 'block';
+}else {
+    document.getElementById('textCut').style.display = 'block';
+    document.getElementById('textCut').nextElementSibling.style.display = 'none';
+}
