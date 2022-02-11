@@ -4,9 +4,12 @@
 
 {% block body %}
 
-<div class="container">
+{% include "header.html.twig" %}
+{% include "header-mobile.html.twig" %}
+
+<div class="container-md">
     <div class="col-12 m-auto">
-        <h2 class="text-center title mt-5">Un souffle solaire</h2>
+        <h2 class="text-center title first">Un souffle solaire</h2>
         <p class="col-12 col-xl-8 m-auto text-center block-intro p-3">Comme un élan d’optimisme, la collection printemps-été 2022 appelle la légèreté et la douceur de vivre.</p>
         <div class="col-9 m-auto text-center block-intro collection pt-2 pb-5"><a href="#" class="collection">Découvrez la collection</a></div>
     </div>
@@ -19,9 +22,9 @@
                 <img class="col-12 mb-5" src="{{ asset("/build/images/miniature-video-intro.png") }}" alt="miniature">
             </div>
 
-            <video id="video" class="col-12 mb-5" controls="controls" controlslist="nodownload" poster="/build/images/miniature-video-intro.png">
-                <source src="{{ asset("/build/video/video-intro.mp4") }}" type="video/mp4">
-                <source src="{{ asset("/build/video/video-intro.ogg") }}" type="video/ogg">
+            <video id="video" class="col-12 mb-5" controls="controls" controlslist="nodownload" poster="build/images/miniature-video-intro.png">
+                <source src="{{ asset("build/images/video-intro.mp4") }}" type="video/mp4">
+                {# <source src="{{ asset("build/images/video-intro.ogg") }}" type="video/ogg"> #}
                 Mettez à jour votre navigateur pour visualiser la vidéo
             </video>
         </div>
@@ -49,7 +52,7 @@
             <div class="col-9 m-auto text-center block-intro collection pt-2 pb-5"><a href="#" class="collection">Découvrez la collection</a></div>
             
             <div class="col-12 d-flex justify-content-center">
-                <img class="col-9 mb-5" src="{{ asset("/build/images/le-rouge.jpg") }}" alt="rouge à lèvre">
+                <img class="col-9 mb-5" src="https://picsum.photos/900/500" alt="rouge à lèvre">
             </div>
         </div>
     </section>
@@ -115,7 +118,7 @@
             <div class="col-9 m-auto text-center block-intro collection pt-2 pb-5"><a href="#" class="collection">Accessoirisez la saison</a></div>
             
             <div class="col-12 d-flex justify-content-center">
-                <img class="col-9 mb-5" src="{{ asset("/build/images/festival.png") }}" alt="women grass">
+                <img class="col-9 mb-5" src="https://picsum.photos/900/500" alt="women grass">
             </div>
         </div>
     </section>
@@ -245,7 +248,7 @@
             <div class="col-9 m-auto text-center block-intro collection pt-2 pb-5"><a href="#" class="collection">En savoir plus</a></div>
             
             <div class="col-12 d-flex justify-content-center">
-                <img class="col-9 mb-5" src="{{ asset("build/images/boite.jpg") }}" alt="boite">
+                <img class="col-9 mb-5" src="https://picsum.photos/900/500" alt="boite">
             </div>
         </div>
     </section>

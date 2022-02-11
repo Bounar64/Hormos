@@ -43,4 +43,11 @@ if(screenWidth <= 1023) {
 }else {
     document.getElementById('textCut').style.display = 'block';
     document.getElementById('textCut').nextElementSibling.style.display = 'none';
-}
+};
+
+document.getElementById('header-mobile').style.display = 'none';
+
+if(screenWidth <= 814) {
+    document.getElementById('header').style.display = 'none';
+    document.getElementById('header-mobile').style.display = 'block';
+};
