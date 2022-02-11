@@ -232,7 +232,7 @@ body {
     font-size: 11px;
     color: #444444;
     position: fixed;
-    z-index: 9999;
+    z-index: 30;
     background-color: #F6F1EB;
     top: 0;
 
@@ -241,10 +241,11 @@ body {
         top: 2rem;
         width: 100%;
         text-align: center;
+        z-index: 40;
     }
 
     .logo-header.up {
-        top: -5px;
+        top: -10px;
     }
 
     .block-head {
@@ -270,19 +271,19 @@ body {
 
     .nav-header {
         padding-left: 5rem;
-        padding-right: 5rem;        
+        padding-right: 5rem;
         
         .nav-list {
             display: flex;
             justify-content: flex-end;
             align-items: center;
             padding: 0;
-            z-index: 20;
         }
 
         .nav-items {
             margin-left: 1.5rem;
             font-size: 13px;
+            z-index: 50;
             
             a {
                 color: #696969;
@@ -295,13 +296,35 @@ body {
             }
 
             input {
+                position: relative;
                 padding: 10px 10px 10px;
                 border: 1px solid #8C8B8A;
+                text-decoration: none;
                 outline:none;
-                width: 150px;
+                width: 100%;
+                transition: all 0.5 ease;
             }
         }
 
+        .nav-items.search {
+            width: 10%;
+        }
+
+        .nav-items.search.grow {
+            width: 70%;
+            animation: grow .5s;
+        }
+        
+        @keyframes grow {
+            from {
+              width: 10%;
+            }
+
+            to {
+              width: 70%;
+            }
+        }
+        
         .nav-items:first-child {
             text-align: start;
             margin-left: 0;
@@ -314,7 +337,6 @@ body {
         }  
     }
 }
-
 
 
 //**********************************************************************************************************************************//
@@ -444,6 +466,10 @@ body {
     .title.first {
         margin-top: 120px;
      }
+
+     .header-mobile.Shadow {
+        box-shadow: rgba(33, 35, 38, 0.05) 0px 11px 10px -10px;
+    }
 
     .header-mobile {
         padding-top: 20px;

@@ -28,13 +28,13 @@ play.addEventListener('mouseout', function() {
     document.getElementById('popover').style.display = 'none';
 });
 
-//** Au click du lecteur lancement de la vidéo */
+//** Au click de l'icon lecteur lancement de la vidéo */
 play.addEventListener('click', function() {
     document.getElementById('miniature').style.display = 'none';
     document.getElementById('video').play();
 });
 
-//** En dessous de 1024px de largeur les textes sont complet */
+//** En dessous de 1024px de largeur les titres de produits sont complet */
 const screenWidth = screen.width;
 
 if(screenWidth <= 1023) {
@@ -45,6 +45,7 @@ if(screenWidth <= 1023) {
     document.getElementById('textCut').nextElementSibling.style.display = 'none';
 };
 
+//** En dessous de 815px de largeur header mobile affiché */
 document.getElementById('header-mobile').style.display = 'none';
 
 if(screenWidth <= 814) {
@@ -52,12 +53,25 @@ if(screenWidth <= 814) {
     document.getElementById('header-mobile').style.display = 'block';
 };
 
+//** Au scroll de la page sur Y au top ... */
 window.addEventListener('scroll', function() {
-    var blockHead = document.getElementById('block-head');
+    var blockHead = document.getElementById('block-head'); 
     var logoHeader = document.getElementById('logo-header');
     var header = document.querySelector('header');
+    var headerMobile = document.getElementById('header-mobile');
 
-    blockHead.classList.toggle('none', window.scrollY > 0);
+    blockHead.classList.toggle('none', window.scrollY > 0); // Mini entête du header disparait
     logoHeader.classList.toggle('up', window.scrollY > 0);
-    header.classList.toggle('Shadow', window.scrollY > 0);
-} )
+    header.classList.toggle('Shadow', window.scrollY > 0); // Ombre dessous de la navbar s'affiche
+    headerMobile.classList.toggle('Shadow', window.scrollY > 0); // Ombre dessous de la navbar-mobile s'affiche
+});
+
+
+document.getElementById('input-search').onclick = function() {
+    SearchGrowfunction();
+};
+
+function SearchGrowfunction() {
+    document.getElementById('search').classList.add('grow');   
+    document.getElementById('logo-header').classList.add('d-none');   
+}
