@@ -51,3 +51,13 @@ if(screenWidth <= 814) {
     document.getElementById('header').style.display = 'none';
     document.getElementById('header-mobile').style.display = 'block';
 };
+
+window.addEventListener('scroll', function() {
+    var blockHead = document.getElementById('block-head');
+    var logoHeader = document.getElementById('logo-header');
+    var header = document.querySelector('header');
+
+    blockHead.classList.toggle('none', window.scrollY > 0);
+    logoHeader.classList.toggle('up', window.scrollY > 0);
+    header.classList.toggle('Shadow', window.scrollY > 0);
+} )

@@ -223,6 +223,10 @@ body {
    }     
 }
 
+.header.Shadow {
+    box-shadow: rgba(33, 35, 38, 0.05) 0px 11px 10px -10px;
+}
+
 .header {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 11px;
@@ -238,7 +242,11 @@ body {
         width: 100%;
         text-align: center;
     }
-    
+
+    .logo-header.up {
+        top: -5px;
+    }
+
     .block-head {
         padding-top: 20px;
         padding-left: 5rem;
@@ -246,10 +254,18 @@ body {
         display: flex;
         justify-content: flex-end;
         z-index: 10;
+        transition: all .2s ease;
 
-        div {
+        a {
+            color: #696969;
             margin-left: 25px;
+            text-decoration: none;
         }
+    }
+
+    .block-head.none {
+        transform: translateY(-40px);
+        display: none;
     }
 
     .nav-header {
@@ -330,17 +346,17 @@ body {
 @media screen and (max-width: 1920px) {
     
     .header {
-        padding-left: 5rem;
-        padding-right: 5rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
 
         .block-head {
-            padding-left: 5rem;
-            padding-right: 5rem;
+            padding-left: 4rem;
+            padding-right: 4rem;
         }
     
         .nav-header {
-            padding-left: 5rem;
-            padding-right: 5rem;
+            padding-left: 4rem;
+            padding-right: 4rem;
         }  
     }
 
