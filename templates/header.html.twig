@@ -1,6 +1,7 @@
-<header class="container-fluid header" id="header">
+<header class="container-fluid header d-none" id="header">
     <div class="logo-header" id="logo-header">
-        <a href="#"><img src="{{ asset("build/images/logo-Hormos-noir-p.png") }}" alt="logo Hormos"></a>
+        <a href="#" class="logo"><img src="{{ asset("build/images/logo-Hormos-noir-p.png") }}" alt="logo Hormos"></a>
+        <a href="#" class="logo"><img src="{{ asset("build/images/logo-Hormos-mobile-p.png") }}" alt="logo Hormos"></a>
     </div>
      
     <div class="block-head" id="block-head">
@@ -8,14 +9,16 @@
         <div><a href="#">Trouver un magasin</a></div>
         <div><a href="#">Nous contacter</a></div>
     </div>
-
+{# Pour desktop #}
     <div class="nav-header pt-3" id="nav-header">
         <ul class="nav-list">
-            <li class="nav-items"><a href="#" class="text-decoration-none"><i class="fa-solid fa-bars"></i> Menu</a></li>
+            <li class="nav-items"><a href="#" class="text-decoration-none"><i class="bi bi-list"></i><span>Menu</span></a></li>
+            <li class="nav-items" id="icon-search">
+            <a href="#" class="text-decoration-none"><i class="bi bi-search"></i></a></li>
             <li class="nav-items search" id="search">
                 <input type="search" name="input-search" placeholder="Rechercher" id="input-search">
-                <i class="fa fa-search"></i>
-                <i class="fa-solid fa-xmark" id="cross"></i>
+                <i class="bi bi-search fa-search"></i>
+                <i class="bi bi-x-lg fa-xmark" id="cross"></i>
                 <div class="block-dropdown" id="block-dropdown">
                     <ul class="dropdown-list" id="dropdown-list">
                         <li>Quelques suggestions</li>
@@ -29,10 +32,28 @@
 
                 <div class="container-fluid search-dropdown-background" id="search-dropdown-background"></div>
             </li>
-            <li class="nav-items"><a href="#" class="text-decoration-none"><i class="fa-regular fa-user"></i> Compte</a></li>
-            <li class="nav-items"><a href="#" class="text-decoration-none"><i class="fa-regular fa-square text-end"></i> Panier</a></li>
+            <li class="nav-items">
+                <a href="#" class="text-decoration-none"><i class="bi bi-person"></i><span>Compte</span></a></li>
+            <li class="nav-items">
+                <a href="#" class="text-decoration-none"><i class="bi bi-handbag"></i><span>Panier</span></a>
+            </li>
         </ul>
     </div>
 
-
+{# Pour tablette & mobile #}
+    <div class="container-fluid nav-search py-3" id="nav-search">
+        <input type="search" name="input-search" placeholder="Rechercher">
+        <i class="bi bi-search fa-search"></i>
+        <i class="bi bi-x-lg fa-xmark" id="cross-mobile"></i>
+        <div class="block-background">
+            <ul class="dropdown-list" id="dropdown-list-m">
+                <li>Quelques suggestions</li>
+                <li><a href="#">Sandales Oran</a></li>
+                <li><a href="#">Sandales Oran</a></li>
+                <li><a href="#">Carrés, châles et écharpes dans la collection Femme (468)</a></li>
+                <li><a href="#">Chaussures dans la collection Femme (293)</a></li>
+                <li><a href="#">Chaussures dans la collection Homme (193</a>)</li>
+            </ul>
+        </div>
+    </div>
 </header>

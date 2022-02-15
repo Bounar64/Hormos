@@ -5,7 +5,7 @@
 {% block body %}
 
 {% include "header.html.twig" %}
-{% include "header-mobile.html.twig" %}
+{% include "menu-sidebar.html.twig" %}
 
 <div class="container-md">
     <div class="col-12 m-auto">
@@ -17,7 +17,11 @@
     <section>
         <div class="block-video">
             <div class="col-12 mb-5 miniature" id="miniature">
-                <a href="#" id="play"><i class="fa-solid fa-play"></i></a> 
+                <a href="#" id="play">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-play-fill me-2" viewBox="0 0 16 16">
+                        <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                    </svg>
+                </a> 
                 <p class="popover" id="popover">Lire la vidéo</p>
                 <img class="col-12 mb-5" src="{{ asset("/build/images/miniature-video-intro.png") }}" alt="miniature">
             </div>
@@ -31,10 +35,10 @@
     </section>
 
     <section>
-        <h2 class="text-center title mt-5">Nos produits</h2>
+        <h2 class="text-center title mt-5 reveal-1">Nos produits</h2>
         <div class="row">
-            <div class="col grid-container">
-                {% set titles = ["Prêt-à-porter Femme", "Prêt-à-porter Homme", "Bijouterie Joaillerie", "Maquillage", "Accessoires Bijoux", "Ceinture", "Maroquinerie", "Chaussures"] %}
+            <div class="col grid-container reveal-2">
+                {% set titles = ["Soie féminine", "Prêt-à-porter Femme", "Bijouterie Joaillerie", "Maquillage", "Accessoires Bijoux", "Ceinture", "Petite Maroquinerie", "Chaussures"] %}
                 {% for title in titles %}
                     <div class="card grid-item">
                         <img src="https://picsum.photos/400/400" class="img-fluid" alt="image produit">
@@ -46,12 +50,12 @@
     </section>
     
     <section>
-        <div class="col-12 m-auto square">
-            <h2 class="text-center title mt-5 pt-5">Trois nouveaux objets de beauté</h2>
-            <p class="col-12 col-xl-8 m-auto text-center block-intro p-3">Rose Nymphéa, Orange Capucine Et Beige d’Eau composent ce nouveau bouquet saisonnier.</p>
-            <div class="col-9 m-auto text-center block-intro collection pt-2 pb-5"><a href="#" class="collection">Découvrez la collection</a></div>
+        <div class="col-12 m-auto square reveal-1">
+            <h2 class="text-center title mt-5 pt-5 reveal-2">Trois nouveaux objets de beauté</h2>
+            <p class="col-12 col-xl-8 m-auto text-center block-intro p-3 reveal-2">Rose Nymphéa, Orange Capucine Et Beige d’Eau composent ce nouveau bouquet saisonnier.</p>
+            <div class="col-9 m-auto text-center block-intro collection pt-2 pb-5 reveal-2"><a href="#" class="collection">Découvrez la collection</a></div>
             
-            <div class="col-12 d-flex justify-content-center">
+            <div class="col-12 d-flex justify-content-center reveal-2">
                 <img class="col-9 mb-5" src="https://picsum.photos/900/500" alt="rouge à lèvre">
             </div>
         </div>
@@ -59,16 +63,16 @@
 
     <section>
         <div class="col-12 m-auto">
-            <h2 class="text-center title mt-5 pt-5">Des rouges sur tous les tons</h2>
-            <p class="col-12 col-xl-8 m-auto text-center block-intro p-3">Rouge Hormòs, collection édition limitée Printemps-Été 2022, Trois nouvelles teintes au fini brillant.</p>
-            <div class="col-9 m-auto text-center block-intro collection pt-2 pb-5"><a href="#" class="collection">Découvrez la collection</a></div>
+            <h2 class="text-center title mt-5 pt-5 reveal-1">Des rouges sur tous les tons</h2>
+            <p class="col-12 col-xl-8 m-auto text-center block-intro p-3 reveal-1">Rouge Hormòs, collection édition limitée Printemps-Été 2022, Trois nouvelles teintes au fini brillant.</p>
+            <div class="col-9 m-auto text-center block-intro collection pt-2 pb-5 reveal-1"><a href="#" class="collection">Découvrez la collection</a></div>
             
             <div class="col-12 grid d-flex justify-content-between">
-                <div class="col-12 col-xl-5">
+                <div class="col-12 col-xl-5 reveal-2">
                     <img class="img-fluid text-center" src="{{ asset("build/images/Hormòs-France.png") }}" alt="dame lipstick" width="600">
                 </div>
                 <div class="col-12 col-xl-5 d-block" id="d-block">
-                    <div class="col d-flex justify-content-between"> 
+                    <div class="col d-flex justify-content-between reveal-2"> 
                         <div class="col-5 card p-0">
                             <a href="#" class="text-decoration-none">
                                 <img class="img-fluid lipstick" src="{{ asset("build/images/2022-02-09 20_03_14-60361TV005_set (230×230).png") }}" alt="lipstick">
@@ -88,7 +92,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col d-flex justify-content-between mt-3">
+                    <div class="col d-flex justify-content-between mt-3 reveal-1">
                         <div class="col-5 card p-0">
                             <a href="#" class="text-decoration-none">
                                 <img class="img-fluid lipstick" src="{{ asset("build/images/2022-02-09 20_05_23-60361TV035_set (230×230).png") }}" alt="lipstick">
@@ -112,12 +116,12 @@
     </section>
 
     <section>
-        <div class="col-12 m-auto square">
-            <h2 class="text-center title mt-5 pt-5">Esprit estival</h2>
-            <p class="col-12 col-xl-8 m-auto text-center block-intro p-3">Associant savoir-faire emblématiques et inspirations de la Maison, les accessoires de mode de l'été déploient leur audace colorée dans une multitude de détails.</p>
-            <div class="col-9 m-auto text-center block-intro collection pt-2 pb-5"><a href="#" class="collection">Accessoirisez la saison</a></div>
+        <div class="col-12 m-auto square reveal-1">
+            <h2 class="text-center title mt-5 pt-5 reveal-2">Esprit estival</h2>
+            <p class="col-12 col-xl-8 m-auto text-center block-intro p-3 reveal-2">Associant savoir-faire emblématiques et inspirations de la Maison, les accessoires de mode de l'été déploient leur audace colorée dans une multitude de détails.</p>
+            <div class="col-9 m-auto text-center block-intro collection pt-2 pb-5 reveal-2"><a href="#" class="collection">Accessoirisez la saison</a></div>
             
-            <div class="col-12 d-flex justify-content-center">
+            <div class="col-12 d-flex justify-content-center reveal-2">
                 <img class="col-9 mb-5" src="https://picsum.photos/900/500" alt="women grass">
             </div>
         </div>
@@ -125,16 +129,16 @@
 
     <section>
         <div class="col-12 m-auto">
-            <h2 class="text-center title mt-5 pt-5">Ponctuations légères</h2>
-            <p class="col-12 col-xl-8 m-auto text-center block-intro p-3">Couleurs pop, pierres raffinées, détails ajourés, les ceintures, bijoux et chapeaux féminins invitent à égayer la silhouette avec légèreté.</p>
-            <div class="col-9 m-auto text-center block-intro collection pt-2 pb-5"><a href="#" class="collection">Illuminez l'allure</a></div>
+            <h2 class="text-center title mt-5 pt-5 reveal-1">Ponctuations légères</h2>
+            <p class="col-12 col-xl-8 m-auto text-center block-intro p-3 reveal-1">Couleurs pop, pierres raffinées, détails ajourés, les ceintures, bijoux et chapeaux féminins invitent à égayer la silhouette avec légèreté.</p>
+            <div class="col-9 m-auto text-center block-intro collection pt-2 pb-5 reveal-1"><a href="#" class="collection">Illuminez l'allure</a></div>
             
             <div class="col-12 grid d-flex justify-content-between">
-                <div class="col-12 col-xl-5">
+                <div class="col-12 col-xl-5 reveal-1">
                     <img class="img-fluid text-center" src="https://picsum.photos/400/400" alt="dame grass" width="600">
                 </div>
                 <div class="col-12 col-xl-5 d-block" id="d-block">
-                    <div class="col d-flex justify-content-between"> 
+                    <div class="col d-flex justify-content-between reveal-1"> 
                         <div class="col-5 card p-0">
                             <a href="#" class="text-decoration-none">
                                 <img class="img-fluid lipstick" src="https://picsum.photos/400/400" alt="bracelet">
@@ -153,7 +157,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col d-flex justify-content-between mt-3">
+                    <div class="col d-flex justify-content-between mt-3 reveal-1">
                         <div class="col-5 card p-0">
                             <a href="#" class="text-decoration-none">
                                 <img class="img-fluid lipstick" src="https://picsum.photos/400/400" alt="lipstick">
@@ -177,12 +181,12 @@
     </section>
 
     <section>
-        <div class="col-12 m-auto square">
-            <h2 class="text-center title mt-5 pt-5">Cravate, tous les cous sont permis !</h2>
-            <p class="col-12 col-xl-8 m-auto text-center block-intro p-3">Imprévisible, facétieuse, la cravate Hermès n'entend pas se limiter aux quatre murs d'un bureau. Autour du cou, quelques grammes de soi(e) aux clins d’œil espiègles. Parfait alibi pour déjouer les apparences, trompe-l’œil de tous les jours, la cravate révèle le pas-de-côté, l’inattendu, le hors-cadre. Plaisir esthète, elle habille la silhouette d’un trait, transformable à l’infini.</p>
-            <div class="col-9 m-auto text-center block-intro collection pt-2 pb-5"><a href="#" class="collection">Marquez votre allure</a></div>
+        <div class="col-12 m-auto square reveal-1">
+            <h2 class="text-center title mt-5 pt-5 reveal-2">Cravate, tous les cous sont permis !</h2>
+            <p class="col-12 col-xl-8 m-auto text-center block-intro p-3 reveal-2">Imprévisible, facétieuse, la cravate Hermès n'entend pas se limiter aux quatre murs d'un bureau. Autour du cou, quelques grammes de soi(e) aux clins d’œil espiègles. Parfait alibi pour déjouer les apparences, trompe-l’œil de tous les jours, la cravate révèle le pas-de-côté, l’inattendu, le hors-cadre. Plaisir esthète, elle habille la silhouette d’un trait, transformable à l’infini.</p>
+            <div class="col-9 m-auto text-center block-intro collection pt-2 pb-5 reveal-2"><a href="#" class="collection">Marquez votre allure</a></div>
             
-            <div class="col-12 d-flex justify-content-center">
+            <div class="col-12 d-flex justify-content-center reveal-2">
                 <img class="col-9 mb-5" src="https://picsum.photos/900/500" alt="picsum">
             </div>
         </div>
@@ -190,16 +194,16 @@
     
     <section>
         <div class="col-12 m-auto">
-            <h2 class="text-center title mt-5 pt-5">Le règne du rectangle</h2>
-            <p class="col-12 col-xl-8 m-auto text-center block-intro p-3">L’été se prête à toutes les fantaisies : la soie choisit le format rectangulaire pour habiller la silhouette et apporter une touche de douceur lors des moments de fraîcheur. Les motifs et couleurs subliment avec générosité la matière, pour une allure vibrante et élégante.</p>
-            <div class="col-9 m-auto text-center block-intro collection pt-2 pb-5"><a href="#" class="collection">Allongez votre carré</a></div>
+            <h2 class="text-center title mt-5 pt-5 reveal-1">Le règne du rectangle</h2>
+            <p class="col-12 col-xl-8 m-auto text-center block-intro p-3 reveal-1">L’été se prête à toutes les fantaisies : la soie choisit le format rectangulaire pour habiller la silhouette et apporter une touche de douceur lors des moments de fraîcheur. Les motifs et couleurs subliment avec générosité la matière, pour une allure vibrante et élégante.</p>
+            <div class="col-9 m-auto text-center block-intro collection pt-2 pb-5 reveal-1"><a href="#" class="collection">Allongez votre carré</a></div>
             
             <div class="col-12 grid d-flex justify-content-between">
-                <div class="col-12 col-xl-5">
+                <div class="col-12 col-xl-5 reveal-1">
                     <img class="img-fluid text-center" src="https://picsum.photos/400/400" alt="dame grass" width="600">
                 </div>
                 <div class="col-12 col-xl-5 d-block" id="d-block">
-                    <div class="col d-flex justify-content-between"> 
+                    <div class="col d-flex justify-content-between reveal-1"> 
                         <div class="col-5 card p-0">
                             <a href="#" class="text-decoration-none">
                                 <img class="img-fluid lipstick" src="https://picsum.photos/400/400" alt="bracelet">
@@ -218,7 +222,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col d-flex justify-content-between mt-3">
+                    <div class="col d-flex justify-content-between mt-3 reveal-1">
                         <div class="col-5 card p-0">
                             <a href="#" class="text-decoration-none">
                                 <img class="img-fluid lipstick" src="https://picsum.photos/400/400" alt="lipstick">
@@ -242,12 +246,12 @@
     </section>
 
     <section>
-        <div class="col-12 m-auto square">
-            <h2 class="text-center title mt-5 pt-5">La boîte orange a de la ressource</h2>
-            <p class="col-12 col-xl-8 m-auto text-center block-intro p-3">Ronde, rectangulaire ou carrée, elle emballe cravate, chapeau, bottes, vaisselle, bijou ou sac. Esthétique, robuste et durable, ces qualités en font un objet à part entière.</p>
-            <div class="col-9 m-auto text-center block-intro collection pt-2 pb-5"><a href="#" class="collection">En savoir plus</a></div>
+        <div class="col-12 m-auto square reveal-1">
+            <h2 class="text-center title mt-5 pt-5 reveal-2">La boîte orange a de la ressource</h2>
+            <p class="col-12 col-xl-8 m-auto text-center block-intro p-3 reveal-2">Ronde, rectangulaire ou carrée, elle emballe cravate, chapeau, bottes, vaisselle, bijou ou sac. Esthétique, robuste et durable, ces qualités en font un objet à part entière.</p>
+            <div class="col-9 m-auto text-center block-intro collection pt-2 pb-5 reveal-2"><a href="#" class="collection">En savoir plus</a></div>
             
-            <div class="col-12 d-flex justify-content-center">
+            <div class="col-12 d-flex justify-content-center reveal-2">
                 <img class="col-9 mb-5" src="https://picsum.photos/900/500" alt="boite">
             </div>
         </div>
