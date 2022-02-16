@@ -16,7 +16,7 @@
 
     <section>
         <div class="block-video">
-            <div class="col-12 mb-5 miniature" id="miniature">
+            {# <div class="col-12 mb-5 miniature" id="miniature">
                 <a href="#" id="play">
                     <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-play-fill me-2" viewBox="0 0 16 16">
                         <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
@@ -24,12 +24,12 @@
                 </a> 
                 <p class="popover" id="popover">Lire la vidéo</p>
                 <img class="col-12 mb-5" src="{{ asset("/build/images/miniature-video-intro.png") }}" alt="miniature">
-            </div>
+            </div> #}
 
-            <video id="video" class="col-12 mb-5" controls="controls" controlslist="nodownload" poster="build/images/miniature-video-intro.png">
+            <video id="video" class="col-12 mb-5" controls="controls" controlslist="nodownload" poster="build/images/miniature-video-intro.png" autoplay muted loop>
                 <source src="{{ asset("build/images/video-intro.mp4") }}" type="video/mp4">
                 {# <source src="{{ asset("build/images/video-intro.ogg") }}" type="video/ogg"> #}
-                Mettez à jour votre navigateur pour visualiser la vidéo
+                {# Mettez à jour votre navigateur pour visualiser la vidéo #}
             </video>
         </div>
     </section>
