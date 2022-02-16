@@ -110,7 +110,6 @@ function SearchGrowMobilefunction() {
     document.getElementById('nav-header').classList.add('hide')
     document.getElementById('nav-search').classList.add('show')
     document.getElementById('dropdown-list-m').classList.add('dropright')
-
 }
 
 function SearchCloseMobilefunction() {
@@ -141,6 +140,7 @@ const observer = new IntersectionObserver(callback, options)
     observer.observe(e);
 })
 
+// Ouverture et fermeture des menus et sous-menu avec changement d'icon + & -
 document.getElementById('sub-btn1').onclick = function() {
     document.getElementById('plus1').classList.toggle('hide');
     document.getElementById('dash1').classList.toggle('show');
@@ -182,6 +182,15 @@ document.getElementById('sub-btn8').onclick = function() {
 }
 
 
+document.getElementById('btn-menu').onclick = function() {
+    document.querySelector('body').classList.add('modalOpen'); // pour bloquer le scroll de la page principal quan le menu et ouvert
+    document.querySelector('aside').classList.add('open'); // pour afficher le fond en opacité 30% 
+    document.getElementById('sideBar').classList.add('open'); // pour ouvrir le menu vertical
+}
 
 
-
+document.getElementById('MenuCross').onclick = function() {
+    document.querySelector('body').classList.remove('modalOpen'); 
+    document.querySelector('aside').classList.remove('open'); 
+    document.getElementById('sideBar').classList.remove('open'); 
+}

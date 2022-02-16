@@ -1,4 +1,4 @@
-<header class="container-fluid header d-none" id="header">
+<header class="container-fluid header" id="header">
     <div class="logo-header" id="logo-header">
         <a href="#" class="logo"><img src="{{ asset("build/images/logo-Hormos-noir-p.png") }}" alt="logo Hormos"></a>
         <a href="#" class="logo"><img src="{{ asset("build/images/logo-Hormos-mobile-p.png") }}" alt="logo Hormos"></a>
@@ -12,9 +12,8 @@
 {# Pour desktop #}
     <div class="nav-header pt-3" id="nav-header">
         <ul class="nav-list">
-            <li class="nav-items"><a href="#" class="text-decoration-none"><i class="bi bi-list"></i><span>Menu</span></a></li>
-            <li class="nav-items" id="icon-search">
-            <a href="#" class="text-decoration-none"><i class="bi bi-search"></i></a></li>
+            <li class="nav-items" id="btn-menu"><i class="bi bi-list"></i><span>Menu</span></li>
+            <li class="nav-items" id="icon-search"><i class="bi bi-search"></i></li>
             <li class="nav-items search" id="search">
                 <input type="search" name="input-search" placeholder="Rechercher" id="input-search">
                 <i class="bi bi-search fa-search"></i>
@@ -32,11 +31,8 @@
 
                 <div class="container-fluid search-dropdown-background" id="search-dropdown-background"></div>
             </li>
-            <li class="nav-items">
-                <a href="#" class="text-decoration-none"><i class="bi bi-person"></i><span>Compte</span></a></li>
-            <li class="nav-items">
-                <a href="#" class="text-decoration-none"><i class="bi bi-handbag"></i><span>Panier</span></a>
-            </li>
+            <li class="nav-items"><i class="bi bi-person"></i><span>Compte</span></li>
+            <li class="nav-items"><i class="bi bi-handbag"></i><span>Panier</span></li>
         </ul>
     </div>
 

@@ -16,6 +16,10 @@ body {
     background-color: #F6F1EB;
 }
 
+body.modalOpen {
+    overflow-y: hidden;
+}
+
 .title {
     font-family: NovecentoBook;
     font-weight: 600;
@@ -297,13 +301,11 @@ body {
             font-size: 13px;
             z-index: 50;
             position: relative;
+            cursor: pointer;
 
-            a {
+            span {
                 color: #696969;
-
-                span {
-                    margin-left: 10px;
-                }
+                margin-left: 10px; 
             }
             
             i {
@@ -357,14 +359,17 @@ body {
             right: 0;
             height: 270px;
             z-index: 60;
+            visibility: hidden;
 
             .dropdown-list {
                 padding-left: 40px;
                 opacity: 0;
+                visibility: hidden;
             }
 
             .dropdown-list.dropright {
                 opacity: 1;
+                visibility: visible;
                 animation: dropright .7s;
                 transition-delay: .2s;     
             }
@@ -466,10 +471,12 @@ body {
         height: 270px;
         z-index: 50;
         opacity: 0;
+        visibility: hidden;
     }
     
     .search-dropdown-background.dropdown {
         opacity: 1;
+        visibility: visible;
         animation: dropdown .4s;
     }
     
@@ -509,25 +516,43 @@ div::-webkit-scrollbar {
    display: none; /* width of the entire scrollbar */
 }
 
+.modalBack.open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 200;
+    transition: 0.4s ease;
+}
+
+.side-bar.open {
+    left: 0;
+}
+
 .side-bar {
     width: 510px;
-    height: 100vh;
+    height: 100%;
     overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 300;
+    transition: 0.4s ease;
 
-    
-    
     .item {
         cursor: pointer;
     }
 
     .item a {
         color: #444444;
+        text-decoration: none;
     }
 
     .item.plus {
         display: flex;
-        justify-content: space-between;    
-        
+        justify-content: space-between;
     }
 
     #plus1, #plus2, #plus3, #plus4,
@@ -558,22 +583,22 @@ div::-webkit-scrollbar {
     
     .top {
         background-color: #FFF;
-        padding: 60px 100px 230px 100px;
+        padding: 60px 100px 275px 100px;
         line-height: 40px;
         font-family: NovecentoBook;
         font-size: 13px;
         letter-spacing: 3px;
-        font-weight: 600;    
+        font-weight: 600;  
+        
+            a {
+                text-decoration: none;
+            }
 
             img {
                 width: 100%;
             }
 
-            a {
-                text-decoration: none;
-            }
-
-            a .first {
+            .first {
                 font-size: 22px;
                 color: #444444;
 
@@ -615,7 +640,7 @@ div::-webkit-scrollbar {
         }
 
         .menu-item {
-            padding: 0 100px 0px 100px;
+            padding: 15px 100px 20px 100px;
 
             i  {
                 color: #8C8B8A;
