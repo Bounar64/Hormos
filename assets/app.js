@@ -140,7 +140,7 @@ const observer = new IntersectionObserver(callback, options)
     observer.observe(e);
 })
 
-// Ouverture et fermeture des menus et sous-menu avec changement d'icon + & -
+// Ouverture et fermeture des menus et sous-menu avec changement d'icon + et -
 document.getElementById('sub-btn1').onclick = function() {
     document.getElementById('plus1').classList.toggle('hide');
     document.getElementById('dash1').classList.toggle('show');

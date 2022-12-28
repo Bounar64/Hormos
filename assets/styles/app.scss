@@ -26,6 +26,7 @@ body.modalOpen {
     font-size: 25px;
     color: #444444;
     letter-spacing: 8px;
+    
 }
 
 .title.first {
@@ -377,11 +378,11 @@ body.modalOpen {
             @keyframes dropright {
                 from {
                     padding-left: 150px;
-                  }
-      
-                  to {
+                }
+
+                to {
                     padding-left: 40px;
-                  } 
+                } 
             }
 
             ul {
@@ -725,7 +726,17 @@ div::-webkit-scrollbar {
         to {
           width: 150px;
         }
-    } 
+    }  
+
+    .grid {
+        flex-direction: column;
+        align-items: center;
+
+            img {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+    }
 }
 
 @media screen and (max-width: 1023px) {
@@ -733,7 +744,7 @@ div::-webkit-scrollbar {
     .grid-container {
         grid-template-columns: auto auto;
     }
-
+    
     .grid-item {
         padding-bottom: 10px;
     }
@@ -793,7 +804,7 @@ div::-webkit-scrollbar {
         }
 
         .block-copyright {
-            display: block;
+            display: flex;
 
             p {
                 text-align: center!important;
@@ -801,7 +812,7 @@ div::-webkit-scrollbar {
         
             .icon {
                 text-align: center;
-                margin-top: 20px;
+                margin-top: 0px;
             }
         }
     }
@@ -941,6 +952,7 @@ div::-webkit-scrollbar {
                 from {
                   height: 0;
                 }
+
                 to {
                   height: 100vh;
                 }
