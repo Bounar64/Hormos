@@ -18,6 +18,6 @@ Home page:
 - Scroll effects
 - Video integration
 - Custom Hormos logo (Adobe Illustrator)
-- Responsive for all device
+- Responsive for all devices
 ##
 
