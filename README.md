@@ -11,7 +11,7 @@ Hermès web site clone (credit: https://www.hermes.com/)
 - Tech: Symfony 5/Twig, Scss, Webpack, Ai
 
 ## Description
-Development of the home page:
+Home page:
 
 - Menu 
 - The search bar
