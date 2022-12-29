@@ -1,5 +1,5 @@
 # Hormòs
-https://hormos.netlify.app/
+https://hormos.netlify.app
 
 ![Boutique-en-ligne-officielle-d-Hormòs-Hormòs-France](https://user-images.githubusercontent.com/79086040/209865404-bcd8bae2-9ecb-441d-a757-a8519f1312ec.png)
 
@@ -20,5 +20,6 @@ Home page:
 - Custom Hormos logo (Adobe Illustrator)
 - Responsive for all devices
 
-## Hermès (credit: https://www.hermes.com/)
+## Hermès (credit: https://www.hermes.com)
+
 
