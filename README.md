@@ -1,5 +1,5 @@
 # Hormòs
-Hermès web site clone (credit: https://www.hermes.com/)
+https://hormos.netlify.app/
 
 ![Boutique-en-ligne-officielle-d-Hormòs-Hormòs-France](https://user-images.githubusercontent.com/79086040/209865404-bcd8bae2-9ecb-441d-a757-a8519f1312ec.png)
 
@@ -19,5 +19,6 @@ Home page:
 - Video integration
 - Custom Hormos logo (Adobe Illustrator)
 - Responsive for all devices
-##
+
+## Hermès (credit: https://www.hermes.com/)
 
